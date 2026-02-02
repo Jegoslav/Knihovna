@@ -18,7 +18,7 @@ public class Main {
         boolean bezi = true;
         while (bezi) {
             System.out.println(MENU_TEXT);
-            String volba = scanner.next().trim();
+            String volba = scanner.nextLine().trim();
 
             switch (volba) {
                 case "1" -> pridejKnihu();
@@ -57,9 +57,9 @@ public class Main {
     private static void pridejKnihu() {
         System.out.println("Přidání knihy");
         System.out.println("Název knihy: ");
-        String nazev = scanner.next().trim();
+        String nazev = scanner.nextLine().trim();
         System.out.println("Jméno autora: ");
-        String autor = scanner.next().trim();
+        String autor = scanner.nextLine().trim();
 
         knihovna.pridejKnihu(nazev, autor);
     }
@@ -67,7 +67,7 @@ public class Main {
     private static void pridejCtenare() {
         System.out.println("Přidání Čtenáře");
         System.out.println("Jméno čtenáře: ");
-        String jmeno = scanner.next().trim();
+        String jmeno = scanner.nextLine().trim();
 
         knihovna.pridejCtenare(jmeno);
     }
